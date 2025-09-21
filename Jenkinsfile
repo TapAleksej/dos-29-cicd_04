@@ -6,7 +6,7 @@ pipeline {
     booleanParam(name: 'BUILD_DOCKER', defaultValue: true, description: 'Build docker image')
     choice(name: 'ENVIRONMENT', choices: ['dev', 'demo', 'prod'])
     string(name: 'TAG', defaultValue: 'latest')
-    gitParameter(name: 'BRANCH', branchFilter: 'origin/(.*)',  defaultValue: 'main', selectedValue: 'DEFAULT')
+    gitParameter(name: 'BRANCH', type: 'PT_BRANCH', branchFilter: 'origin/(.*)',  defaultValue: 'main', selectedValue: 'DEFAULT')
   }
 
   environment {
