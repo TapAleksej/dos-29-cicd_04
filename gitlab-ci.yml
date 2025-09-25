@@ -1,2 +1,6 @@
 stages:
   - code-quality
+  - tests
+  - build
+  - deploy
+  - notify
